@@ -2,26 +2,6 @@ import Link from 'next/link'
 import { prisma } from '@/db'
 import TodoItem from '@/components/TodoItem'
 
-// const a  = prisma.todo.create({
-//   data: {
-//     title: 'test',
-//     complete: false
-//   }
-// });
-
-async function qweqwe() {
-
-  const todos = await prisma.todo.findMany()
-
-  // const todos = await prisma.todo.create({
-  //   data: {
-  //     title: 'test',
-  //     complete: false
-  //   }
-  // })
-
-}
-
 async function toggleTodo(id: string, complete: boolean) {
   'use server'
 
