@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cp .env.example .env",
-    "start": "npx prisma migrate deploy && next start -H 0.0.0.0 -p ${PORT:-8080}",
+    "build": "next build && cp .env.example .env && npx prisma generate && npx prisma migrate deploy",
+    "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
     "lint": "next lint"
   },
   "dependencies": {
